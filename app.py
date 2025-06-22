@@ -13,6 +13,7 @@ import logging
 from streamlit_extras.add_vertical_space import add_vertical_space
 from dotenv import load_dotenv
 load_dotenv()
+os.environ["GROQ_API_KEY"] = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
 
 
 # Setup logging
